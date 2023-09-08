@@ -1,10 +1,8 @@
 <?php 
-include "config/db_connect.php";
-
-$sql = "SELECT * FROM products";
-$stmt = $pdo->prepare($sql);
-$stmt->execute();
-$products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+include "classes/Product.php";
+// creating an instance of Product Class
+$productInstance = new Product();
+$products = $productInstance->getAllProducts();
 
 ?>
 <!DOCTYPE html>
@@ -35,8 +33,11 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $product['product_name']; ?></h5>
                         <h5 class="card-title">$<?php echo $product['product_price']; ?></h5>
-                        <p class="card-text  text-truncate">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">View more</a>
+                        <p class="card-text  text-truncate"><?php echo $product['product_description']; ?></p>
+                        <div class="">
+                            <a href="product.php?id=<?php echo $product['id']; ?>" class="btn btn-outline-secondary">View more</a>
+                            <a href="" class="btn btn-outline-success ">Add to cart</a>
+                        </div>   
                     </div>
                 </div>
             </div>

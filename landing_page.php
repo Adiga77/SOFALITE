@@ -306,7 +306,7 @@
 				<div class="sofa-collection collectionbg2">
 					<div class="container">
 						<div class="sofa-collection-txt">
-							<h2>unlimited dainning table collection</h2>
+							<h2>unlimited dinning table collection</h2>
 							<button class="btn btn-warning" >
 								Sign-up to view more 
 							</button>
