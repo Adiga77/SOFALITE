@@ -75,9 +75,7 @@
 													</div>
 													<button class="btn-cart welcome-add-cart">
 														<span class="lnr lnr-plus-circle"></span>
-														Login <span>in</span> today
-													</button>
-													<button class="btn-cart welcome-add-cart welcome-more-info" onclick="window.location.href='#'">
+															 Explore
 													</button>
 												</div><!--/.welcome-hero-txt-->
 											</div><!--/.single-welcome-hero-->
@@ -114,10 +112,7 @@
 													</div>
 													<button class="btn-cart welcome-add-cart">
 														<span class="lnr lnr-plus-circle"></span>
-														Sign <span>up</span> today
-													</button>
-													<button class="btn-cart welcome-add-cart welcome-more-info">
-														
+															Explore
 													</button>
 												</div><!--/.welcome-hero-txt-->
 											</div><!--/.single-welcome-hero-->
@@ -298,7 +293,7 @@
 						<div class="sofa-collection-txt">
 							<h2>unlimited sofa collection</h2>
 							<button class="btn btn-warning">
-								Login to view moer
+								Explore
 							</button>
 						</div>
 					</div>	
@@ -308,7 +303,7 @@
 						<div class="sofa-collection-txt">
 							<h2>unlimited dinning table collection</h2>
 							<button class="btn btn-warning" >
-								Sign-up to view more 
+								 Explore
 							</button>
 						</div>
 					</div>
