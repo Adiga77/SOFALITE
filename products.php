@@ -23,7 +23,7 @@ $products = $productInstance->getAllProducts();
     </div>
    
     <!-- products in card -->
-    <div class="container mt-5 ">
+    <div class="container mt-5 mb-5">
         <div class="row g-4">
         <?php foreach($products as $product){?>
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
