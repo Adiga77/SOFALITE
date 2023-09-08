@@ -73,7 +73,7 @@
 															<del>$ 499.00</del>
 														</p>
 													</div>
-													<button class="btn-cart welcome-add-cart" onclick="window.location.href='#'">
+													<button class="btn-cart welcome-add-cart">
 														<span class="lnr lnr-plus-circle"></span>
 														Login <span>in</span> today
 													</button>
@@ -112,11 +112,11 @@
 															<del>$ 299.00</del>
 														</p>
 													</div>
-													<button class="btn-cart welcome-add-cart" onclick="window.location.href='#'">
+													<button class="btn-cart welcome-add-cart">
 														<span class="lnr lnr-plus-circle"></span>
 														Sign <span>up</span> today
 													</button>
-													<button class="btn-cart welcome-add-cart welcome-more-info" onclick="window.location.href='#'">
+													<button class="btn-cart welcome-add-cart welcome-more-info">
 														
 													</button>
 												</div><!--/.welcome-hero-txt-->
@@ -151,7 +151,7 @@
 				                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
 				                    <i class="fa fa-bars"></i>
 				                </button>
-				                <a class="navbar-brand" href="index.html">Sofa<span>Lite</span>.</a>
+				                <a class="navbar-brand" href="#">Sofa<span>Lite</span></a>
 
 				            </div><!--/.navbar-header-->
 				            <!-- End Header Navigation -->
@@ -164,8 +164,8 @@
 				                    <li class="scroll"><a href="#feature">Features</a></li>
 									<li class="scroll"><a href="#newsletter">About</a></li>
 				                    <li class="nav-item"><a href="#newsletter">Contact</a></li>
-									<li class="nav-item"><a class="nav-link" href="registerandlogin.php">Login</a></li>
-									<li class="nav-item"><a class="nav-link" href="registerandlogin.php">Register</a></li>
+									<li class="nav-item"><a href="products.php">Products</a></li>
+									<li class="nav-item"><a class="nav-link" href="#">Cart</a></li>
 				                </ul><!--/.nav -->
 				            </div><!-- /.navbar-collapse -->
 				        </div><!--/.container-->
