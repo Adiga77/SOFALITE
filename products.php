@@ -1,6 +1,11 @@
 <?php 
 include "config/db_connect.php";
 
+$sql = "SELECT * FROM products";
+$stmt = $pdo->prepare($sql);
+$stmt->execute();
+$products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,17 +27,20 @@ include "config/db_connect.php";
     <!-- products in card -->
     <div class="container mt-5 ">
         <div class="row g-4">
-            <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4">
+        <?php foreach($products as $product){?>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                 <!-- card -->
-                <div class="card">
-                    <img src="..." class="card-img-top" alt="...">
+                <div class="card  w-100 h-100">
+                    <div class="text-center mt-3"><img src="uploads/<?php echo $product['product_image']; ?>" style="width: 200px; height:200px;" alt="..."></div>
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title"><?php echo $product['product_name']; ?></h5>
+                        <h5 class="card-title">$<?php echo $product['product_price']; ?></h5>
                         <p class="card-text  text-truncate">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <a href="#" class="btn btn-primary">View more</a>
                     </div>
                 </div>
             </div>
+            <?php }?>
         </div>
     </div>
 
