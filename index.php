@@ -162,9 +162,7 @@ $cartProducts = $cartInstance->selectAllFromCart();?>
 				                    <li class=" scroll active"><a href="#home">Home</a></li>
 				                    <li class="scroll"><a href="#new-arrivals">New arrival</a></li>
 				                    <li class="scroll"><a href="#feature">Features</a></li>
-									<li class="nav-link"><a href="about.php">About</a></li>
-				                    <li class="nav-item"><a href="contact.php">Contact</a></li>
-									<li class="nav-item"><a href="services.php">Services</a></li>
+									<li class="nav-item"><a href="about.php">About Us</a></li>
 									<li class="nav-item"><a href="products.php">Products</a></li>
 									<li><a class="nav-link" href="cart.php"><img src="assets/services/images/cart.svg" style="width: 27px; height: 27px;"><strong><?php echo count($cartProducts); ?></strong></a>
 				                </ul><!--/.nav -->

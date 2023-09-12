@@ -10,13 +10,7 @@
           <a class="nav-link active" arial-current="page" href="index.php"><strong>Home</strong></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="About.php"><strong>About</strong></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link " href="contact.php"><strong>Contact Us</strong></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="services.php"><strong>Services</strong></a>
+          <a class="nav-link" href="about.php"><strong>About Us</strong></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="products.php"><strong>Products</strong></a>

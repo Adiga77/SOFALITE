@@ -3,6 +3,7 @@ include "classes/Cart.php";
 $cartInstance = new Cart();
 $cartProducts = $cartInstance->selectAllFromCart();
 $totalPrice = $cartInstance->getCartTotal();
+date_default_timezone_set("Africa/Lagos");
 
 ?>
 
@@ -31,6 +32,7 @@ $totalPrice = $cartInstance->getCartTotal();
     <div class="container mt-5">
         <h2>Cart</h2>
         <hr>
+        <h3 class="text-end mb-4"><?php echo date("l, M d, Y h:i a") ; ?></h3> 
     </div>
     
     <div class="container mt-5 mb-5">

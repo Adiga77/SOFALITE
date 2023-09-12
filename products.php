@@ -6,6 +6,7 @@ $cartProducts = $cartInstance->selectAllFromCart();
 // creating an instance of Product Class
 $productInstance = new Product();
 $products = $productInstance->getAllProducts();
+date_default_timezone_set("Africa/Lagos");
 
 ?>
 <!DOCTYPE html>
@@ -27,6 +28,7 @@ $products = $productInstance->getAllProducts();
         <!-- header -->
         <h4>PRODUCTS</h4>
         <hr>
+        <h3 class="text-end mb-4"><?php echo date("l, M d, Y h:i a") ; ?></h3> 
     </div>
    
     <!-- products in card -->
