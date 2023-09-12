@@ -1,14 +1,5 @@
 @charset "UTF-8";
 
-/*!
-Animate.css - http://daneden.me/animate
-
-Copyright (c) 2013 Daniel Eden
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-*/
 
 .animated {
   -webkit-animation-duration: 1s;
@@ -26,7 +17,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
 }
-/* 
+
 @-webkit-keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     -webkit-transform: translateY(0);
@@ -42,7 +33,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     -webkit-transform: translateY(-15px);
     transform: translateY(-15px);
   }
-} */
+}
 
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
@@ -68,7 +59,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   -webkit-animation-name: bounce;
   animation-name: bounce;
 }
-/* 
+
 @-webkit-keyframes flash {
   0%, 50%, 100% {
     opacity: 1;
@@ -77,7 +68,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   25%, 75% {
     opacity: 0;
   }
-} */
+}
 
 @keyframes flash {
   0%, 50%, 100% {
@@ -94,8 +85,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   animation-name: flash;
 }
 
-/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
-/* 
+ 
 @-webkit-keyframes pulse {
   0% {
     -webkit-transform: scale(1);
@@ -137,7 +127,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   -webkit-animation-name: pulse;
   animation-name: pulse;
 }
-/* 
+
 @-webkit-keyframes rubberBand {
   0% {
     -webkit-transform: scale(1);
@@ -164,7 +154,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: scale(1);
   }
 }
- */
+
 @keyframes rubberBand {
   0% {
     -webkit-transform: scale(1);
@@ -201,7 +191,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   -webkit-animation-name: rubberBand;
   animation-name: rubberBand;
 }
-/* 
+
 @-webkit-keyframes shake {
   0%, 100% {
     -webkit-transform: translateX(0);
@@ -217,7 +207,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     -webkit-transform: translateX(10px);
     transform: translateX(10px);
   }
-} */
+}
 
 @keyframes shake {
   0%, 100% {
@@ -310,7 +300,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   -webkit-animation-name: swing;
   animation-name: swing;
 }
-/* 
+
 @-webkit-keyframes tada {
   0% {
     -webkit-transform: scale(1);
@@ -337,7 +327,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: scale(1) rotate(0);
   }
 }
- */
+
 @keyframes tada {
   0% {
     -webkit-transform: scale(1);
@@ -375,8 +365,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   animation-name: tada;
 }
 
-/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
-/* 
+ 
 @-webkit-keyframes wobble {
   0% {
     -webkit-transform: translateX(0%);
@@ -412,7 +401,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     -webkit-transform: translateX(0%);
     transform: translateX(0%);
   }
-} */
+} 
 
 @keyframes wobble {
   0% {
@@ -462,7 +451,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   -webkit-animation-name: wobble;
   animation-name: wobble;
 }
-/* 
+
 @-webkit-keyframes bounceIn {
   0% {
     opacity: 0;
@@ -487,7 +476,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: scale(1);
   }
 }
- */
+
 @keyframes bounceIn {
   0% {
     opacity: 0;
@@ -521,7 +510,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   -webkit-animation-name: bounceIn;
   animation-name: bounceIn;
 }
-/* 
+
 @-webkit-keyframes bounceInDown {
   0% {
     opacity: 0;
@@ -544,7 +533,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
-} */
+}
 
 @keyframes bounceInDown {
   0% {
@@ -578,7 +567,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   -webkit-animation-name: bounceInDown;
   animation-name: bounceInDown;
 }
-/* 
+
 @-webkit-keyframes bounceInLeft {
   0% {
     opacity: 0;
@@ -602,7 +591,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: translateX(0);
   }
 }
- */
+
 @keyframes bounceInLeft {
   0% {
     opacity: 0;

@@ -1,0 +1,35 @@
+body::before{
+    display: block;
+    content: '';
+    height: 100px;
+}
+
+/*-------------------------------------
+        11. Footer
+--------------------------------------*/
+ .footer {
+    background: #f8f9fd;
+    display: flex;
+    align-items: center;
+    height: 154px;
+    width: 100%;
+}
+.hm-footer-copyright p,.hm-footer-copyright p a {
+    color: #a5adb3;
+    font-size: 14px;
+    font-weight: 400;
+}
+.footer-social a i {
+    color: #a4aaaf;
+    margin: 0 18px 24px 0;
+    -webkit-transition: .3s; 
+    -moz-transition:.3s; 
+    -ms-transition:.3s; 
+    -o-transition:.3s;
+    transition: .3s;
+}
+.footer-social i:hover{color: #e99c2e;} 
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
