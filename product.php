@@ -5,6 +5,7 @@ $cartProducts = $cartInstance->selectAllFromCart();
 if(isset($_GET['id'])){
     include "classes/Product.php";
     $product_id = $_GET['id'];
+    
 
     // creating an instance of Product class
     $productInstance = new Product();

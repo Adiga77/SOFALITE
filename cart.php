@@ -2,6 +2,7 @@
 include "classes/Cart.php";
 $cartInstance = new Cart();
 $cartProducts = $cartInstance->selectAllFromCart();
+$totalPrice = $cartInstance->getCartTotal();
 
 ?>
 
@@ -60,7 +61,7 @@ $cartProducts = $cartInstance->selectAllFromCart();
                             <a href="processes/incrementQty.php?id=<?php echo $cartproduct['product_id']; ?>" class="inpt-group-text btn btn-success btn-sm">+</a>
                         </div>
                     </td>
-                    <td><?php echo $cartproduct['price']; ?><strong>x</strong><?php echo $cartproduct['quantities']; ?></td>
+                    <td>$<?php echo $cartproduct['price']; ?>.00</td>
                     <td><a href="processes/deleteFromCart.php?id=<?php echo $cartproduct['product_id']; ?>" class="btn btn-danger btn-sm float-end">Remove</a></td>
                 </tr>
                 <?php }?>
@@ -88,7 +89,7 @@ $cartProducts = $cartInstance->selectAllFromCart();
                         <span class="text-black">Total</span>
                     </div>
                     <div class="col-md-6 text-right">
-                        <strong class="text-black">$230.00</strong>
+                        <strong class="text-black">$<?php echo array_sum($totalPrice); ?>.00</strong>
                     </div>
                     </div>
 

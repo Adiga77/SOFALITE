@@ -20,6 +20,16 @@ class Cart{
         return $result;
     }
 
+    // function to get all from cart 
+    public function getAllFromCart(){
+        include "../config/db_connect.php";
+        $sql = "SELECT * FROM carts";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
     // function to delete from cart
     public function deleteFromCart($product_id){
         include "../config/db_connect.php";
@@ -38,6 +48,7 @@ class Cart{
         $product = $stmt->fetch(PDO::FETCH_ASSOC);
         return $product;
      } 
+ 
 
 
     // function to increment quantities
@@ -50,7 +61,7 @@ class Cart{
         return $product;
 
     }
-
+    // function to decrease quantity
     public function decrementquantities($product_id){
         include "../config/db_connect.php";
         $sql = "UPDATE carts SET quantities = quantities - 1 WHERE product_id=?";  
@@ -59,6 +70,25 @@ class Cart{
         $product = $stmt->fetch(PDO::FETCH_ASSOC);
         return $product;
 
+    }
+    // function to set qty to 1 or greater
+    public function setQuantitiesValue(){
+        include "../config/db_connect.php";
+        $sql = "ALTER TABLE carts ADD CONSTRAINT chk_quantity_minvaliue CHECK (quantities >= 1)";
+        $stmt = $pdo->prepare($sql);
+        $result = $stmt->execute();
+        return $result;
+
+    }
+
+    // function to get cart total
+    public function getCartTotal(){
+        include "config/db_connect.php";
+        $sql = "SELECT SUM(quantities * price) FROM carts";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $result;
     }
     
 }

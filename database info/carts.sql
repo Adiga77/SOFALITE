@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 12, 2023 at 02:20 PM
+-- Generation Time: Sep 12, 2023 at 06:54 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.3.23
 
@@ -35,15 +35,17 @@ CREATE TABLE `carts` (
   `price` int(11) NOT NULL,
   `quantities` int(11) NOT NULL,
   `createdOn` datetime NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ;
 
 --
 -- Dumping data for table `carts`
 --
 
 INSERT INTO `carts` (`id`, `product_id`, `product_image`, `product_name`, `price`, `quantities`, `createdOn`) VALUES
-(21, '6', 'arrivals5.png', 'Modern Chair', 120, 35, '2023-09-12 10:56:55'),
-(27, '1', 'arrivals6.png', 'Mapple Wood Dinning  Table', 140, 1, '2023-09-12 12:42:22');
+(27, '1', 'arrivals6.png', 'Mapple Wood Dinning  Table', 140, 1, '2023-09-12 12:42:22'),
+(35, '5', 'arrivals4.png', 'Stylish Chair', 100, 1, '2023-09-12 17:51:54'),
+(37, '6', 'arrivals5.png', 'Modern Chair', 120, 1, '2023-09-12 17:52:45'),
+(38, '10', 'slider1.png', 'cloth covered accent chair ', 399, 1, '2023-09-12 17:52:50');
 
 --
 -- Indexes for dumped tables
@@ -63,7 +65,7 @@ ALTER TABLE `carts`
 -- AUTO_INCREMENT for table `carts`
 --
 ALTER TABLE `carts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
