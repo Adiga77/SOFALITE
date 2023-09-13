@@ -27,7 +27,7 @@ $cartProducts = $cartInstance->selectAllFromCart();
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 	</head>
 
-	<body>
+	<body id="about">
          <?php include "components/navbar.php"; ?>
 
         <div class="hero">
@@ -48,6 +48,12 @@ $cartProducts = $cartInstance->selectAllFromCart();
                 </div>
             </div>
         </div>
+
+		<!-- company details section -->
+		<div class="container mb-5 mt-5">
+			<?php include "components/companydetail.php" ?>
+		</div>
+
 		<!-- Start Why Choose Us Section -->
 		<div class="why-choose-section">
 			<div class="container">
@@ -157,11 +163,11 @@ $cartProducts = $cartInstance->selectAllFromCart();
 			<div class="container relative">
 				<h3 class="text-center mb-4" ><strong>Team Members</strong></h3>
 				<!-- team members -->
-				<div class="row  mb-5">
+				<div class="row  mb-5 g-3">
 						<!--team member 1 -->
 						<div class="col-md-4">
-							<div class="card">
-								<img src="uploads/arrivals3.png" class="card-img-top" alt="...">
+							<div class="card w-100 h-100">
+								<img src="assets/images/team-members/michael.png" class="card-img-top" alt="...">
 								<div class="card-body text-center bg-light text-dark">
 									<h5 class="card-title">Team member 1</h5>
 									<p class="card-text">Adokwu Michael Adiga</p>
@@ -170,22 +176,22 @@ $cartProducts = $cartInstance->selectAllFromCart();
 						</div>
 						<!--team member 2 -->
 						<div class="col-md-4">
-							<div class="card">
-								<img src="uploads/arrivals3.png" class="card-img-top" alt="...">
+							<div class="card w-100 h-100">
+								<img src="assets/images/team-members/onuh.png" class="card-img-top" alt="...">
 								<div class="card-body text-center bg-light text-dark">
 									<h5 class="card-title">Team member 2</h5>
-									<p class="card-text">Onuh</p>
+									<p class="card-text">Onuh Joseph Adakole</p>
 								</div>
 							</div>
 						</div>
 
 						<!--team member 3 -->
 						<div class="col-md-4">
-							<div class="card">
-								<img src="uploads/arrivals3.png" class="card-img-top" alt="...">
+							<div class="card w-100 h-100" >
+								<img src="assets/images/team-members/innocent.png" class="card-img-top" alt="...">
 								<div class="card-body text-center bg-light text-dark">
 									<h5 class="card-title">Team member 3 </h5>
-									<p class="card-text">Innocent</p>
+									<p class="card-text">Echono Innocent</p>
 								</div>
 							</div>
 						</div>
@@ -206,13 +212,7 @@ $cartProducts = $cartInstance->selectAllFromCart();
 							<div class="row links-wrap">
 								<div class="col-6 col-sm-6 col-md-3">
 									<ul class="list-unstyled">
-										<li><a href="about.php">About us</a></li>
-									</ul>
-								</div>
-
-								<div class="col-6 col-sm-6 col-md-3">
-									<ul class="list-unstyled">
-										<li><a href="contact.php">Contact us</a></li>
+										<li><a href="#about">About us</a></li>
 									</ul>
 								</div>
 
@@ -222,11 +222,6 @@ $cartProducts = $cartInstance->selectAllFromCart();
 									</ul>
 								</div>
 
-								<div class="col-6 col-sm-6 col-md-3">
-									<ul class="list-unstyled">
-										<li><a href="services.php">Services</a></li>
-									</ul>
-								</div>
 							</div>
 						</div>
 					</div>
