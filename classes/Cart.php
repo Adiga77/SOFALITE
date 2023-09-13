@@ -10,7 +10,7 @@ class Cart{
         return $result;
     }
 
-    // function to select from cart using product id
+    // function to select from cart using 
     public function selectAllFromCart(){
         include "config/db_connect.php";
         $sql = "SELECT * FROM carts";
@@ -30,7 +30,26 @@ class Cart{
         return $result;
     }
 
-    // function to delete from cart
+      // function to get all from cart 
+      public function getCartItemById($product_id){
+        include "../config/db_connect.php";
+        $sql = "SELECT * FROM carts WHERE product_id =?";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([$product_id]);
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
+    // function to delete  cart 
+    public function deleteCart(){
+        include "../config/db_connect.php";
+        $sql = "DELETE FROM carts";
+        $stmt = $pdo->prepare($sql);
+        $result = $stmt->execute();
+        return $result;
+    }
+
+    // function to delete from cart by product id
     public function deleteFromCart($product_id){
         include "../config/db_connect.php";
         $sql = "DELETE FROM carts WHERE product_id=?";

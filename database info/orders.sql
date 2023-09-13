@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 13, 2023 at 12:05 PM
+-- Generation Time: Sep 13, 2023 at 12:06 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.3.23
 
@@ -24,34 +24,35 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `carts`
+-- Table structure for table `orders`
 --
 
-CREATE TABLE `carts` (
+CREATE TABLE `orders` (
   `id` int(11) NOT NULL,
-  `product_id` varchar(50) NOT NULL,
+  `product_id` int(11) NOT NULL,
   `product_image` varchar(255) NOT NULL,
   `product_name` varchar(255) NOT NULL,
-  `price` int(11) NOT NULL,
-  `quantities` int(11) NOT NULL,
-  `createdOn` datetime NOT NULL DEFAULT current_timestamp()
-) ;
+  `price` varchar(255) NOT NULL,
+  `quantities` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `carts`
+-- Dumping data for table `orders`
 --
 
-INSERT INTO `carts` (`id`, `product_id`, `product_image`, `product_name`, `price`, `quantities`, `createdOn`) VALUES
-(53, '2', 'arrivals1.png', 'sofa', 65, 1, '2023-09-13 11:03:23');
+INSERT INTO `orders` (`id`, `product_id`, `product_image`, `product_name`, `price`, `quantities`) VALUES
+(1, 2, 'arrivals1.png', 'sofa', '65', 3),
+(2, 3, 'arrivals2.png', 'sofa', '80', 2),
+(3, 6, 'arrivals5.png', 'Modern Chair', '120', 1);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `carts`
+-- Indexes for table `orders`
 --
-ALTER TABLE `carts`
+ALTER TABLE `orders`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -59,10 +60,10 @@ ALTER TABLE `carts`
 --
 
 --
--- AUTO_INCREMENT for table `carts`
+-- AUTO_INCREMENT for table `orders`
 --
-ALTER TABLE `carts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `orders`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

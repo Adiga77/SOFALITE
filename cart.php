@@ -71,6 +71,11 @@ date_default_timezone_set("Africa/Lagos");
             <!-- table body end -->
         </table>
         <!-- End of cart information section -->
+        <div >
+            <a href="processes/addToOrders.php" class="inpt-group-text btn btn-success btn-sm">Place Order</a>
+            <a href="orders.php" class="inpt-group-text btn btn-success btn-sm">View Order</a>
+            <a href="processes/clearCart.php" class="inpt-group-text btn btn-danger btn-sm">Clear cart</a>
+        </div>
 
         <div class="row mt-5">
         <div class="col-md-6"></div>
