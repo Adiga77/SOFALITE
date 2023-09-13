@@ -5,6 +5,7 @@ $cartInstance = new Cart();
 $cartProducts = $cartInstance->selectAllFromCart();
 $ordersInstance = new Order();
 $ordersProducts = $ordersInstance->allOrders();
+$orderTotal = $ordersInstance->getOrdersTotal();
 date_default_timezone_set("Africa/Lagos");
 
 
@@ -36,6 +37,7 @@ date_default_timezone_set("Africa/Lagos");
                     <th>Product Name</th>
                     <th>Quantities</th>
                     <th>Price</th>
+                    <th>Created On</th>
                 </tr>
             </thead>
             <!-- table head end -->
@@ -48,11 +50,20 @@ date_default_timezone_set("Africa/Lagos");
                     <td><?php echo $orderproduct['product_name']; ?></td>
                     <td><?php echo $orderproduct['quantities']; ?></td>
                     <td>$<?php echo $orderproduct['price']; ?>.00</td>
+                    <td><?php echo $orderproduct['createdOn']; ?></td>
                 </tr>
                 <?php }?>
             </tbody>
             <!-- table body end -->
         </table>
+        <div class="row mt-5 mb-5">
+            <div class="col-md text-end ">
+                <h3 class="">Totals</h3>
+                <div>
+                     <p class="lead">$<?php echo array_sum($orderTotal); ?>.00</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="assets/bootstrap5/bootstrap.bundle.js"></script>

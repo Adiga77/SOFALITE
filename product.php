@@ -41,7 +41,7 @@ if(isset($_GET['id'])){
                 <h5 class="text-start"><?php echo $product['product_name']; ?></h5>
                 <h5 class="card-title">$<?php echo $product['product_price']; ?>.00</h5>
                 <p class="lead"><?php echo $product['product_description']; ?></p>
-                <a href="" class="btn btn-outline-success">Add to cart</a>
+                <a href="processes/addToCart.php?id=<?php echo $product_id; ?>" class="btn btn-outline-success">Add to cart</a>
                 <a href="products.php" class="btn btn-outline-primary">View Products</a>
             </div>
         </div><!-- end of row -->

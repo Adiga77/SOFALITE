@@ -27,6 +27,16 @@ class Order{
         $result = $stmt->execute();
         return $result;
     }
+
+    // function for cart totals
+    public function getOrdersTotal(){
+        include "config/db_connect.php";
+        $sql = "SELECT SUM(quantities * price) FROM orders";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $result;
+    }
 }
 
 ?>

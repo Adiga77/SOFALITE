@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 12, 2023 at 06:53 PM
+-- Generation Time: Sep 13, 2023 at 03:46 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.3.23
 
@@ -20,6 +20,57 @@ SET time_zone = "+00:00";
 --
 -- Database: `sofalite`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `carts`
+--
+
+CREATE TABLE `carts` (
+  `id` int(11) NOT NULL,
+  `product_id` varchar(50) NOT NULL,
+  `product_image` varchar(255) NOT NULL,
+  `product_name` varchar(255) NOT NULL,
+  `price` int(11) NOT NULL,
+  `quantities` int(11) NOT NULL,
+  `createdOn` datetime NOT NULL DEFAULT current_timestamp()
+) ;
+
+--
+-- Dumping data for table `carts`
+--
+
+INSERT INTO `carts` (`id`, `product_id`, `product_image`, `product_name`, `price`, `quantities`, `createdOn`) VALUES
+(64, '10', 'slider1.png', 'cloth covered accent chair ', 399, 1, '2023-09-13 14:30:55'),
+(65, '2', 'arrivals1.png', 'sofa', 65, 1, '2023-09-13 14:35:42');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `orders`
+--
+
+CREATE TABLE `orders` (
+  `id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `product_image` varchar(255) NOT NULL,
+  `product_name` varchar(255) NOT NULL,
+  `price` varchar(255) NOT NULL,
+  `quantities` int(11) NOT NULL,
+  `createdOn` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`id`, `product_id`, `product_image`, `product_name`, `price`, `quantities`, `createdOn`) VALUES
+(1, 2, 'arrivals1.png', 'sofa', '65', 1, '2023-09-13 14:07:34'),
+(2, 3, 'arrivals2.png', 'sofa', '80', 1, '2023-09-13 14:07:34'),
+(3, 6, 'arrivals5.png', 'Modern Chair', '120', 1, '2023-09-13 14:07:34'),
+(4, 1, 'arrivals6.png', 'Mapple Wood Dinning  Table', '140', 1, '2023-09-13 14:07:34'),
+(5, 4, 'arrivals3.png', 'Wooden Armchair', '40', 2, '2023-09-13 14:07:34');
 
 -- --------------------------------------------------------
 
@@ -56,6 +107,18 @@ INSERT INTO `products` (`id`, `product_image`, `product_name`, `product_price`, 
 --
 
 --
+-- Indexes for table `carts`
+--
+ALTER TABLE `carts`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `products`
 --
 ALTER TABLE `products`
@@ -64,6 +127,18 @@ ALTER TABLE `products`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `carts`
+--
+ALTER TABLE `carts`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `products`

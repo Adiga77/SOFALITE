@@ -25,6 +25,7 @@ date_default_timezone_set("Africa/Lagos");
 <body id="top">
 <?php include "components/navbar.php" ?>
     <div class=" container mt-5">
+        
         <!-- header -->
         <h4>PRODUCTS</h4>
         <hr>
