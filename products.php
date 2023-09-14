@@ -1,4 +1,5 @@
 <?php 
+session_start();
 include "classes/Product.php";
 include "classes/Cart.php";
 $cartInstance = new Cart();
@@ -25,37 +26,27 @@ date_default_timezone_set("Africa/Lagos");
 <body id="top">
 <?php include "components/navbar.php" ?>
     <div class=" container mt-5">
-        
+
+    <div class="text-center mb-3">
+    <?php 
+    if(isset($_SESSION['success'])){
+        echo $_SESSION['success'];
+        unset($_SESSION['success']);
+    }
+
+    if(isset($_SESSION['exist'])){
+        echo $_SESSION['exist'];
+        unset($_SESSION['exist']);
+    }
+    ?>
+    </div>
+
         <!-- header -->
         <h4>PRODUCTS</h4>
         <hr>
         <h3 class="text-end mb-4"><?php echo date("l, M d, Y h:i a") ; ?></h3> 
     </div>
-   
-    <!-- products in card -->
-    <div class="container product_data mt-5 mb-5">
-        <div class="row product_data g-4">
-        <?php foreach($products as $product){?>
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
-                <!-- card -->
-                <div class="card  w-100 h-100">
-                    <div class="text-center mt-3"><img src="uploads/<?php echo $product['product_image']; ?>" style="width: 200px; height:200px;" alt="..."></div>
-                        <form action="" method="post">
-                            <div class="card-body">
-                                <h5 class="card-title"><?php echo $product['product_name']; ?></h5>
-                                <h5 class="card-title">$<?php echo $product['product_price']; ?>.00</h5>
-                                <p class="card-text  text-truncate"><?php echo $product['product_description']; ?></p>
-                                <div class="">
-                                    <a href="product.php?id=<?php echo $product['id']; ?>" class="btn btn-outline-secondary">View more</a>
-                                    <a href="processes/addToCart.php?id=<?php echo $product['id']; ?>" class="btn btn-outline-success ">Add to cart</a>
-                                </div>   
-                            </div>
-                     </form>
-                </div>
-            </div>
-            <?php }?>
-        </div>
-    </div>
+    <?php include "components/productsCard.php"; ?>
     <div class="container"><a href="#top" class="btn btn-outline-warning mb-3 float-end">Go to top</a></div>
 
     <!--footer start-->

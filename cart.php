@@ -29,6 +29,7 @@ date_default_timezone_set("Africa/Lagos");
 <body>
     <?php include "components/navbar.php"; ?>
     <!-- header -->
+    
     <div class="container mt-5">
         <h2>Cart</h2>
         <hr>
@@ -100,11 +101,6 @@ date_default_timezone_set("Africa/Lagos");
                     </div>
                     </div>
 
-                    <div class="row">
-                    <div class="col-md-12">
-                        <a href="chechout.php" class="btn btn-secondary btn-lg py-3 ">Proceed To Checkout</a>
-                    </div>
-                    </div>
                 </div>
                 </div>
             </div>
