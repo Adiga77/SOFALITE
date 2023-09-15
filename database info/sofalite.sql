@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 13, 2023 at 03:46 PM
+-- Generation Time: Sep 15, 2023 at 12:35 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.3.23
 
@@ -37,14 +37,6 @@ CREATE TABLE `carts` (
   `createdOn` datetime NOT NULL DEFAULT current_timestamp()
 ) ;
 
---
--- Dumping data for table `carts`
---
-
-INSERT INTO `carts` (`id`, `product_id`, `product_image`, `product_name`, `price`, `quantities`, `createdOn`) VALUES
-(64, '10', 'slider1.png', 'cloth covered accent chair ', 399, 1, '2023-09-13 14:30:55'),
-(65, '2', 'arrivals1.png', 'sofa', 65, 1, '2023-09-13 14:35:42');
-
 -- --------------------------------------------------------
 
 --
@@ -70,7 +62,19 @@ INSERT INTO `orders` (`id`, `product_id`, `product_image`, `product_name`, `pric
 (2, 3, 'arrivals2.png', 'sofa', '80', 1, '2023-09-13 14:07:34'),
 (3, 6, 'arrivals5.png', 'Modern Chair', '120', 1, '2023-09-13 14:07:34'),
 (4, 1, 'arrivals6.png', 'Mapple Wood Dinning  Table', '140', 1, '2023-09-13 14:07:34'),
-(5, 4, 'arrivals3.png', 'Wooden Armchair', '40', 2, '2023-09-13 14:07:34');
+(5, 4, 'arrivals3.png', 'Wooden Armchair', '40', 2, '2023-09-13 14:07:34'),
+(6, 10, 'slider1.png', 'cloth covered accent chair ', '399', 1, '2023-09-13 19:42:47'),
+(7, 2, 'arrivals1.png', 'sofa', '65', 1, '2023-09-13 19:42:47'),
+(8, 1, 'arrivals6.png', 'Mapple Wood Dinning  Table', '140', 1, '2023-09-13 19:42:47'),
+(9, 6, 'arrivals5.png', 'Modern Chair', '120', 1, '2023-09-13 19:42:47'),
+(13, 1, 'arrivals6.png', 'Mapple Wood Dinning  Table', '140', 1, '2023-09-13 19:49:20'),
+(14, 2, 'arrivals1.png', 'sofa', '65', 1, '2023-09-13 19:49:20'),
+(15, 3, 'arrivals2.png', 'sofa', '80', 1, '2023-09-13 19:49:20'),
+(16, 2, 'arrivals1.png', 'sofa', '65', 1, '2023-09-13 20:48:54'),
+(17, 3, 'arrivals2.png', 'sofa', '80', 1, '2023-09-13 20:48:54'),
+(18, 6, 'arrivals5.png', 'Modern Chair', '120', 1, '2023-09-13 20:48:54'),
+(19, 4, 'arrivals3.png', 'Wooden Armchair', '40', 1, '2023-09-13 20:48:54'),
+(20, 7, 'arrivals7.png', 'Arm Chair ', '90', 1, '2023-09-13 21:59:15');
 
 -- --------------------------------------------------------
 
@@ -91,9 +95,9 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `product_image`, `product_name`, `product_price`, `product_description`) VALUES
-(1, 'arrivals6.png', 'Mapple Wood Dinning  Table', '140', 'sofa'),
-(2, 'arrivals1.png', 'sofa', '65', 'sofa'),
-(3, 'arrivals2.png', 'sofa', '80', 'sofa'),
+(1, 'arrivals6.png', 'Mapple Wood Dinning  Table', '140', 'Mapple Wood Dining Table is a product made from hard wood with strong stump for making tables,dining tables etc with a well blended surface.'),
+(2, 'arrivals1.png', 'Armless Sofa', '65', 'Armless Sofa is a well blended cotton made with a well balance giving fit. Available both home, School and Office.'),
+(3, 'arrivals2.png', 'sofa', '80', 'Sofa is a one seat chair comfortable for family  with a hard fabrics and cotton made.'),
 (4, 'arrivals3.png', 'Wooden Armchair', '40', 'Brown wooden sofa is one of the best sofa ever made with a comfortable balance, made from wood and form by sofa-lite international company in Nigeria. '),
 (5, 'arrivals4.png', 'Stylish Chair', '100', 'stylish chairs is an office chair with comfortable foam made from cotton and Aluminon arm, this product is a wonderful chair, is the best service giving to user.'),
 (6, 'arrivals5.png', 'Modern Chair', '120', 'Modern bar chair is an execute soft chair use for official with a comfortable giving balance use both home and office.'),
@@ -138,7 +142,7 @@ ALTER TABLE `carts`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `products`
