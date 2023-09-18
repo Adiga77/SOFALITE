@@ -1,14 +1,14 @@
 <?php
 include "../classes/Order.php";
 include "../classes/Cart.php";
-$ordersInstance = new Order();
-$orders = $ordersInstance->orders();
-$cartInstance = new Cart();
-$result = $cartInstance->deleteCart();
-
-if($orders){
+if(isset($_POST['submit'])){
+    $name = $_POST['name'];
+    $address = $_POST['address'];
+    $ordersInstance = new Order();
+    $cartInstance = new Cart();
+    $orders = $ordersInstance->orders();
+    $result = $cartInstance->deleteCart();
     header('location:../orders.php');
 }
-
 
 ?>

@@ -1,14 +1,16 @@
 <?php
 class Order{
+    
     // function to insert into orders
     public function orders(){
         include "../config/db_connect.php";
-        $sql = "INSERT INTO orders (product_id, product_image, product_name, price, quantities) SELECT product_id, product_image, product_name, price, quantities FROM carts";
+        $sql = "INSERT INTO orders (product_id, product_image, product_name, price, quantities)  SELECT product_id, product_image, product_name, price, quantities FROM carts";
         $stmt = $pdo->prepare($sql);
         $result = $stmt->execute();
         return $result;
 
     }
+
 
       // function to select all orders 
       public function allOrders(){

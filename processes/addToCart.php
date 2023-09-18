@@ -8,6 +8,7 @@ if(isset($_GET['id'])){
 
     // we used the get superglobal variable to get the id we appended to the url
     $product_id = $_GET['id'];
+    $_SESSION['product_id'] = $product_id;
 
     
     $cartProducts = $cartInstance->getCartItemById($product_id);

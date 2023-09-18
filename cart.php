@@ -5,6 +5,7 @@ $cartProducts = $cartInstance->selectAllFromCart();
 $totalPrice = $cartInstance->getCartTotal();
 date_default_timezone_set("Africa/Lagos");
 
+
 ?>
 
 <!DOCTYPE html>
@@ -21,8 +22,8 @@ date_default_timezone_set("Africa/Lagos");
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>Cart</title>
     <style>
-        input[type=text]{
-            width: 50px;
+        input[type=txt]{
+            width: 30px;
         }
     </style>
 </head>
@@ -60,7 +61,7 @@ date_default_timezone_set("Africa/Lagos");
                     <td>
                         <div class="input-group mb-3" >
                             <a href="processes/decrementQty.php?id=<?php echo $cartproduct['product_id']; ?>" class="inpt-group-text btn btn-warning btn-sm">-</a>
-                            <input type="text" class="text-center" value="<?php echo $cartproduct['quantities']; ?>" disabled>
+                            <input type="txt" class="text-center" value="<?php echo $cartproduct['quantities']; ?>" disabled>
                             <a href="processes/incrementQty.php?id=<?php echo $cartproduct['product_id']; ?>" class="inpt-group-text btn btn-success btn-sm">+</a>
                         </div>
                     </td>
@@ -73,10 +74,11 @@ date_default_timezone_set("Africa/Lagos");
         </table>
         <!-- End of cart information section -->
         <div >
-            <a href="#processes/addToOrders.php" class="inpt-group-text btn btn-success btn-sm">Place Order</a>
+            <a href="" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">place order</a>
             <a href="orders.php" class="inpt-group-text btn btn-success btn-sm">View Order</a>
             <a href="processes/clearCart.php" class="inpt-group-text btn btn-danger btn-sm">Clear cart</a>
         </div>
+        <?php include"components/userDetailsModal.php" ?>
 
         <div class="row mt-5">
         <div class="col-md-6"></div>
