@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 18, 2023 at 09:38 AM
+-- Generation Time: Sep 18, 2023 at 09:47 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.3.23
 
@@ -52,32 +52,6 @@ CREATE TABLE `orders` (
   `quantities` int(11) NOT NULL,
   `createdOn` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `orders`
---
-
-INSERT INTO `orders` (`id`, `product_id`, `product_image`, `product_name`, `price`, `quantities`, `createdOn`) VALUES
-(1, 2, 'arrivals1.png', 'sofa', '65', 1, '2023-09-13 14:07:34'),
-(2, 3, 'arrivals2.png', 'sofa', '80', 1, '2023-09-13 14:07:34'),
-(3, 6, 'arrivals5.png', 'Modern Chair', '120', 1, '2023-09-13 14:07:34'),
-(4, 1, 'arrivals6.png', 'Mapple Wood Dinning  Table', '140', 1, '2023-09-13 14:07:34'),
-(5, 4, 'arrivals3.png', 'Wooden Armchair', '40', 2, '2023-09-13 14:07:34'),
-(6, 10, 'slider1.png', 'cloth covered accent chair ', '399', 1, '2023-09-13 19:42:47'),
-(7, 2, 'arrivals1.png', 'sofa', '65', 1, '2023-09-13 19:42:47'),
-(8, 1, 'arrivals6.png', 'Mapple Wood Dinning  Table', '140', 1, '2023-09-13 19:42:47'),
-(9, 6, 'arrivals5.png', 'Modern Chair', '120', 1, '2023-09-13 19:42:47'),
-(13, 1, 'arrivals6.png', 'Mapple Wood Dinning  Table', '140', 1, '2023-09-13 19:49:20'),
-(14, 2, 'arrivals1.png', 'sofa', '65', 1, '2023-09-13 19:49:20'),
-(15, 3, 'arrivals2.png', 'sofa', '80', 1, '2023-09-13 19:49:20'),
-(16, 2, 'arrivals1.png', 'sofa', '65', 1, '2023-09-13 20:48:54'),
-(17, 3, 'arrivals2.png', 'sofa', '80', 1, '2023-09-13 20:48:54'),
-(18, 6, 'arrivals5.png', 'Modern Chair', '120', 1, '2023-09-13 20:48:54'),
-(19, 4, 'arrivals3.png', 'Wooden Armchair', '40', 1, '2023-09-13 20:48:54'),
-(20, 7, 'arrivals7.png', 'Arm Chair ', '90', 1, '2023-09-13 21:59:15'),
-(21, 2, 'arrivals1.png', 'Armless Sofa', '65', 4, '2023-09-15 15:34:33'),
-(22, 6, 'arrivals5.png', 'Modern Chair', '120', 1, '2023-09-15 15:34:33'),
-(23, 10, 'slider1.png', 'cloth covered accent chair ', '399', 1, '2023-09-15 15:34:33');
 
 -- --------------------------------------------------------
 
@@ -145,7 +119,7 @@ ALTER TABLE `carts`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `products`
