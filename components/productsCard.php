@@ -12,14 +12,9 @@
                                 <h5 class="card-title" id="name" ><?php echo $product['product_name']; ?></h5>
                                 <h5 class="card-title" id="price" >$<?php echo $product['product_price']; ?>.00</h5>
                                 <p class="card-text  text-truncate"><?php echo $product['product_description']; ?></p>
-                                <div class="input-group mb-3" >
-                                    <a href="processes/decrementQty.php?id=<?php echo $cartproduct['product_id']; ?>" class="inpt-group-text btn btn-warning btn-sm">-</a>
-                                    <input type="number" class="text-center" id="qty" value="1" disabled>
-                                    <a href="processes/incrementQty.php?id=<?php echo $cartproduct['product_id']; ?>" class="inpt-group-text btn btn-success btn-sm">+</a>
-                                </div>
                                 <div class="">
                                     <a href="product.php?id=<?php echo $product['id']; ?>" class="btn btn-outline-secondary">View more</a>
-                                    <button value="<?php echo $product['id']; ?>" id="<?php echo $product['id']; ?>" class="btn btn-outline-success item">Add to cart</button>
+                                    <a href="processes/addToCart.php?id=<?php echo $product['id']; ?>" class="btn btn-outline-success ">Add to cart</a>
                                 </div>   
                             </div>
                      </form>

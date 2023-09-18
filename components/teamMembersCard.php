@@ -25,7 +25,7 @@
 						<!--team member 3 -->
 						<div class="col-md-4">
 							<div class="card w-100 h-100" >
-								<img src="assets/images/team-members/innocent.png" class="card-img-top" alt="...">
+								<img src="assets/images/team-members/innocent.jpg" class="card-img-top" alt="...">
 								<div class="card-body text-center bg-light text-dark">
 									<h5 class="card-title">Team member 3 </h5>
 									<p class="lead">Echono Innocent</p>

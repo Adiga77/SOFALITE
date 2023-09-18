@@ -91,11 +91,11 @@ class Cart{
 
     }
     // function to set qty to 1 or greater
-    public function setQuantitiesValue(){
+    public function setQuantitiesValue($product_id){
         include "../config/db_connect.php";
-        $sql = "ALTER TABLE carts ADD CONSTRAINT chk_quantity_minvaliue CHECK (quantities >= 1)";
+        $sql = "ALTER TABLE carts ADD CONSTRAINT chk_quantity_minvaliue CHECK (quantities >= 1) WHERE $product_id=?";
         $stmt = $pdo->prepare($sql);
-        $result = $stmt->execute();
+        $result = $stmt->execute([$product_id]);
         return $result;
 
     }
