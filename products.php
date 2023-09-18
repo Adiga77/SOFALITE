@@ -9,6 +9,7 @@ $productInstance = new Product();
 $products = $productInstance->getAllProducts();
 date_default_timezone_set("Africa/Lagos");
 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,23 +25,10 @@ date_default_timezone_set("Africa/Lagos");
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body id="top">
-<?php include "components/navbar.php" ?>
+    <?php include "components/navbar.php" ?>
     <div class=" container mt-5">
 
     <div class="text-center mb-3">
-    <?php 
-    if(isset($_SESSION['success'])){
-        echo $_SESSION['success'];
-        unset($_SESSION['success']);
-    }
-
-    if(isset($_SESSION['exist'])){
-        echo $_SESSION['exist'];
-        unset($_SESSION['exist']);
-    }
-    ?>
-    </div>
-
         <!-- header -->
         <h4>PRODUCTS</h4>
         <hr>
@@ -67,7 +55,7 @@ date_default_timezone_set("Africa/Lagos");
         </footer><!--/.footer-->
 		<!--footer end-->
 
-    <!-- bootstrap 5 script -->
     <script src="assets/bootstrap5/bootstrap.bundle.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

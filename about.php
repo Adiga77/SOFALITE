@@ -25,6 +25,16 @@ $cartProducts = $cartInstance->selectAllFromCart();
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+		<style>
+			.card img{
+				height: 250px;
+				width: 250px;
+				margin: auto;
+				padding-top: 12px;
+				padding-bottom: 12px;
+				border-radius: 50%;
+			}
+		</style>
 	</head>
 
 	<body id="about">

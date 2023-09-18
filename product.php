@@ -35,5 +35,6 @@ if(isset($_GET['id'])){
     <script src="assets/bootstrap5//bootstrap.bundle.js"></script>
     <script src="assets/js/custom2.js"></script>
     <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/app.js"></script>
 </body>
 </html>
