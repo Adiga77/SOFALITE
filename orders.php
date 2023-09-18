@@ -52,8 +52,8 @@ date_default_timezone_set("Africa/Lagos");
                     <td><?php echo $orderproduct['product_name']; ?></td>
                     <td><?php echo $orderproduct['quantities']; ?></td>
                     <td>$<?php echo $orderproduct['price']; ?>.00</td>
-                    <td>$<?php echo $orderproduct['name']; ?>.00</td>
-                    <td>$<?php echo $orderproduct['address']; ?>.00</td>
+                    <td><?php echo $orderproduct['name']; ?></td>
+                    <td><?php echo $orderproduct['address']; ?></td>
                     <td><?php echo $orderproduct['createdOn']; ?></td>
                 </tr>
                 <?php }?>

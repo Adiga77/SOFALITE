@@ -18,6 +18,7 @@ if(isset($_POST['submit'])){
   
     $userInstance->insertIntoUsers($name, $address);
     $orders = $ordersInstance->orders();
+    // $userInstance->deleteUsers();
     $result = $cartInstance->deleteCart();
     header('location:../orders.php');
 }

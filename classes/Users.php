@@ -8,16 +8,22 @@ class Users{
         return $result;
     }
 
-    public function selectFromUsersAndOrders(){
-        include "config/db_connect.php";
-        $sql = "SELECT users.*, orders.* FROM users, orders";
+    // public function selectFromUsersAndOrders(){
+    //     include "config/db_connect.php";
+    //     $sql = "SELECT users.*, orders.* FROM users, orders";
+    //     $stmt = $pdo->prepare($sql);
+    //     $stmt->execute();
+    //     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    //     return $result;
+    // }
+
+    public function deleteUsers(){
+        include "../config/db_connect.php";
+        $sql = "DELETE * FROM users";
         $stmt = $pdo->prepare($sql);
-        $stmt->execute();
-        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $result = $stmt->execute();
         return $result;
     }
-
-
-
 }
+
 ?>
