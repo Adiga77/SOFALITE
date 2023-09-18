@@ -4,7 +4,7 @@ class Order{
     // function to insert into orders
     public function orders(){
         include "../config/db_connect.php";
-        $sql = "INSERT INTO orders (product_id, product_image, product_name, price, quantities)  SELECT product_id, product_image, product_name, price, quantities FROM carts";
+        $sql = "INSERT INTO orders (product_id, product_image, product_name, price, quantities, name, address)  SELECT carts.product_id AS product_id, carts.product_image AS product_image, carts.product_name AS product_name, carts.price AS price, carts.quantities AS quantities, users.name AS name, users.address AS address FROM carts, users";
         $stmt = $pdo->prepare($sql);
         $result = $stmt->execute();
         return $result;
